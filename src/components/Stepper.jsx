@@ -18,7 +18,6 @@ const Stepper = () => {
     <div className="p-4 flex justify-center w-[1200px] m-auto">
       {steps.map((step, index) => (
         <React.Fragment key={index}>
-          {/* Stepper Item */}
           <div className="relative flex flex-col items-center text-teal-600">
             {/* Circle */}
             {/* <div className="rounded-full border-4 border-gray-300 w-4 h-4"></div> */}
@@ -27,14 +26,10 @@ const Stepper = () => {
                 index <= completedSteps ? "border-green-500" : "border-gray-300"
               }`}
             ></div>
-            {/* Description */}
             <div className="absolute top-full mt-2 text-center w-32 text-sm items-center text-gray-500">
               {step}
             </div>
           </div>
-
-          {/* Connecting Line */}
-
           {index < steps.length - 1 && (
             <div
               className={`flex-auto border-t-4 relative top-1.5 ${

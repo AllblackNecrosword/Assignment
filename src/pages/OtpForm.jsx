@@ -4,8 +4,6 @@ import logo from "../assets/Logo1.png";
 
 const OtpForm = () => {
   const navigate = useNavigate();
-  const [input, setinput] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -23,7 +21,6 @@ const OtpForm = () => {
           </p>
           {/* OTP Input Section */}
           <div className="mt-8 flex flex-col gap-y-3 w-full items-center md:flex-row md:gap-y-0 md:justify-between">
-            {/* First 3 Inputs */}
             <div className="flex gap-4 w-full justify-between items-center md:gap-4">
               <input
                 type="text"
@@ -65,16 +62,11 @@ const OtpForm = () => {
           >
             Verify
           </button>
-          {loading ? (
-            <p className="mt-2 text-gray-400">
-              Didn't receive a code?
-              <span className="text-blue-400">Resend Code</span>
-            </p>
-          ) : (
+     
             <p className="mt-2 text-gray-400">
               Wait 1:39 seconds before requesting a new code.
             </p>
-          )}
+  
         </div>
       </div>
       {/* Footer */}
